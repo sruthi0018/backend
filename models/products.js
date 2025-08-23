@@ -18,6 +18,7 @@ const productSchema = new mongoose.Schema(
       min: 0,
     },
     category:{ type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
+  images: [String],
     status: {
       type: String,
       enum: ["active", "inactive", "out_of_stock"],

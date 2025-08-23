@@ -4,7 +4,7 @@ exports.createCategory = async (req, res,next) => {
   try {
     const data = req.body;
 
-    const category = await category.create(data);
-    res.status(201).json(category);
+    const cat = await category.create(data);
+    res.status(201).json(cat);
   }  catch (e) { next(e); }
 };

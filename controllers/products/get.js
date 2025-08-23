@@ -14,16 +14,19 @@ exports.get = async (req, res) =>{
     const filter = {};
     if (category) filter.category = category;
     if (status) filter.status = status;
-    if (search) {
-      filter.name = { $regex: search, $options: "i" }; // case-insensitive search by product name
-    }
-
+   if (search) {
+  filter.$or = [
+    { name: { $regex: search, $options: "i" } },
+    { vendor: { $regex: search, $options: "i" } }
+  ];
+}
     // Sorting
     const sort = {};
     sort[sortBy] = sortOrder === "asc" ? 1 : -1;
 
     // Query
     const products = await Product.find(filter)
+    .populate("category", "name") 
       .sort(sort)
       .skip((page - 1) * limit)
       .limit(limit);

@@ -20,6 +20,8 @@ const storage = multer.diskStorage({
   }
 });
 
+console.log(storage,"stoo")
+
 const upload = multer({ storage });
 
 module.exports = upload;

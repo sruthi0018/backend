@@ -9,7 +9,7 @@ console.log("Body:", req.body);
 
    
    if (req.files && req.files.length > 0) {
-      data.image = req.files.map(file => `/uploads/products/${file.filename}`);
+      data.images = req.files.map((file) => `/uploads/products/${file.filename}`);
     }
 
     const product = new Product(data);

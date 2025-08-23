@@ -1,10 +1,10 @@
 const express = require('express');
+const upload = require('../middleware/upload');
 const { get } = require('../controllers/products/get');
 const { createProduct } = require('../controllers/products/create');
 const { updateProduct } = require('../controllers/products/update');
 const {  getById } = require('../controllers/products/getById');
 const { deleteProduct } = require('../controllers/products/delete');
-const upload = require('../middleware/upload');
 
 const router = express.Router();
 
