@@ -5,7 +5,7 @@ const router = express.Router();
 
 exports.get = async (req, res) =>{
   try {
-    let { page = 1, limit = 10, sortBy = "createdAt", sortOrder = "desc", category, status, search } = req.query;
+    let { page = 1, limit = 12, sortBy = "createdAt", sortOrder = "desc", category, status, search } = req.query;
 
     page = parseInt(page);
     limit = parseInt(limit);
