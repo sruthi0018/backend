@@ -1,4 +1,4 @@
-# Product Listing App (Next.js + Express + MongoDB)
+# OnlineMarketPlace Dashboard (Next.js + Express + MongoDB)
 
 ## 🚀 Setup Instructions
 
