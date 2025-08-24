@@ -21,6 +21,8 @@ cp .env
 PORT=5000
 MONGO_URI=""
 
+Live URL =https://onlinemarketplace-backend-xueu.onrender.com
+
 Base URL
 
 /api
@@ -46,3 +48,6 @@ GET /api/product/:id → get single product
 PUT /api/product/:id → update product
 
 DELETE /api/product/:id → delete product
+
+
+
